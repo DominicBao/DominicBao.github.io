@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://dominicbao.github.io</id>
     <title>阿方的博客</title>
-    <updated>2021-04-24T15:45:19.353Z</updated>
+    <updated>2021-04-24T15:55:17.797Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://dominicbao.github.io"/>
     <link rel="self" href="https://dominicbao.github.io/atom.xml"/>
@@ -12,8 +12,8 @@
     <rights>All rights reserved 2021, 阿方的博客</rights>
     <entry>
         <title type="html"><![CDATA[开始写博客啦]]></title>
-        <id>https://dominicbao.github.io/post/kai-shi-xie-bo-ke-la/</id>
-        <link href="https://dominicbao.github.io/post/kai-shi-xie-bo-ke-la/">
+        <id>https://dominicbao.github.io/post/20210424/</id>
+        <link href="https://dominicbao.github.io/post/20210424/">
         </link>
         <updated>2021-04-24T15:04:59.000Z</updated>
         <content type="html"><![CDATA[<p>一直有记录一些笔记的习惯但一直没有分享的习惯，直到最近突然觉得可能分享出来更有意义一点</p>
