@@ -2,20 +2,23 @@
   <head>
     <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>开始写微博啦 | 阿方的博客</title>
+<title>Store.js的使用——本地存储localStorage的封装插件 | 阿方的博客</title>
 <link rel="shortcut icon" href="https://dominicbao.github.io/favicon.ico?v=1619539002299">
 <link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
 <link rel="stylesheet" href="https://dominicbao.github.io/styles/main.css">
-<link rel="alternate" type="application/atom+xml" title="开始写微博啦 | 阿方的博客 - Atom Feed" href="https://dominicbao.github.io/atom.xml">
+<link rel="alternate" type="application/atom+xml" title="Store.js的使用——本地存储localStorage的封装插件 | 阿方的博客 - Atom Feed" href="https://dominicbao.github.io/atom.xml">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
 
 
 
-    <meta name="description" content="一直都有记录点东西的习惯
-会简单的记录一些学习笔记&amp;生活琐事&amp;杂文趣事
-现在分享出来希望和大家一起进步
-" />
-    <meta name="keywords" content="生活" />
+    <meta name="description" content="
+2019-11-26 @阿方
+在说Store.js之前，我们先来明确几个基本的概念，Cookie，localStorage，sessionStorage
+
+
+Cookie
+Cookie 是小甜饼的意思。顾名思义，cookie 确实非常小，..." />
+    <meta name="keywords" content="js,教程" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
     <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
   </head>
@@ -81,27 +84,51 @@
         <div class="post-detail">
           <article class="post">
             <h2 class="post-title">
-              开始写微博啦
+              Store.js的使用——本地存储localStorage的封装插件
             </h2>
             <div class="post-info">
               <span>
-                2021-04-25
+                2021-04-27
               </span>
               <span>
-                1 min read
+                3 min read
               </span>
               
-                <a href="https://dominicbao.github.io/tag/xmIBQ_dfY/" class="post-tag">
-                  # 生活
+                <a href="https://dominicbao.github.io/tag/PpP9u4I0g/" class="post-tag">
+                  # js
+                </a>
+              
+                <a href="https://dominicbao.github.io/tag/aQaAeaeCj/" class="post-tag">
+                  # 教程
                 </a>
               
             </div>
             
             <div class="post-content-wrapper">
               <div class="post-content">
-                <p>一直都有记录点东西的习惯</p>
-<p>会简单的记录一些学习笔记&amp;生活琐事&amp;杂文趣事</p>
-<p>现在分享出来希望和大家一起进步</p>
+                <blockquote>
+<p>2019-11-26 @阿方<br>
+在说Store.js之前，我们先来明确几个基本的概念，Cookie，localStorage，sessionStorage</p>
+</blockquote>
+<ul>
+<li>Cookie<br>
+Cookie 是小甜饼的意思。顾名思义，cookie 确实非常小，它的大小限制为4KB左右，是网景公司的前雇员 Lou Montulli 在1993年3月的发明。它的主要用途有保存登录信息，比如你登录某个网站市场可以看到“记住密码”，这通常就是通过在 Cookie 中存入一段辨别用户身份的数据来实现的</li>
+<li>localStorage<br>
+localStorage 是 HTML5 标准中新加入的技术，它并不是什么划时代的新东西。早在 IE 6 时代，就有一个叫 userData 的东西用于本地存储，而当时考虑到浏览器兼容性，更通用的方案是使用 Flash。而如今，localStorage 被大多数浏览器所支持，如果你的网站需要支持 IE6+，那以 userData 作为你的 polyfill 的方案是种不错的选择</li>
+<li>sessionStorage<br>
+sessionStorage 与 localStorage 的接口类似，但保存数据的生命周期与 localStorage 不同。做过后端开发的同学应该知道 Session 这个词的意思，直译过来是“会话”。而 sessionStorage 是一个前端的概念，它只是可以将一部分数据在当前会话中保存下来，刷新页面数据依旧存在。但当页面关闭后，sessionStorage 中的数据就会被清空<br>
+<img src="https://dominicbao.github.io/post-images/1619538848881.png" alt="" loading="lazy"><br>
+有了以上的的基础概念，我们就可以来理解store.js到底是个什么东西了，随着浏览器的快速发展，很多需要用到本地存储的应用场景诞生了，于是需求推动了技术，什么globalStorage啊都来了。store.js可以理解成一个大礼包，他封装了大多数人对localStorage的使用，他不涉及cookie，在ie6之下时会自动使用userData，我们不必再去管什么场景下用什么本地浏览器存储会不会影响到cookies，影响到浏览器的传输速率，这就是它最大的用处<br>
+以下是它的基本语法<br>
+<img src="https://dominicbao.github.io/post-images/1619538912743.png" alt="" loading="lazy"><br>
+判断它在当前浏览器是否可用<br>
+<img src="https://dominicbao.github.io/post-images/1619538929903.png" alt="" loading="lazy"><br>
+好了简单的分享一下<br>
+Github地址：<br>
+https://github.com/marcuswestin/store.js/tree/master/dist<br>
+简要的文档github地址：<br>
+https://github.com/DominicBao/echarts-guanxi/branches</li>
+</ul>
 
               </div>
               <div class="toc-container">
@@ -111,6 +138,15 @@
           </article>
         </div>
 
+        
+          <div class="next-post">
+            <div class="next">下一篇</div>
+            <a href="https://dominicbao.github.io/post/20191111-01/">
+              <h3 class="post-title">
+                spark的学习笔记（1）
+              </h3>
+            </a>
+          </div>
         
 
         
