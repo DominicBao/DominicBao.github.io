@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://dominicbao.github.io</id>
     <title>阿方的博客</title>
-    <updated>2021-04-27T16:05:17.324Z</updated>
+    <updated>2021-05-07T17:17:40.734Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://dominicbao.github.io"/>
     <link rel="self" href="https://dominicbao.github.io/atom.xml"/>
@@ -10,6 +10,110 @@
     <logo>https://dominicbao.github.io/images/avatar.png</logo>
     <icon>https://dominicbao.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, 阿方的博客</rights>
+    <entry>
+        <title type="html"><![CDATA[浅谈JavaScript执行机制]]></title>
+        <id>https://dominicbao.github.io/post/20210505-01/</id>
+        <link href="https://dominicbao.github.io/post/20210505-01/">
+        </link>
+        <updated>2021-05-05T14:46:32.000Z</updated>
+        <content type="html"><![CDATA[<blockquote>
+<p>2021-05-08 @阿方<br>
+在说js的执行机制之前，清先记住一个亘古不变的原则，js是一门单线程的语言，你所谓的各种花里胡哨的‘多线程’，全部都是用单线程实现的</p>
+</blockquote>
+<p>先看看看第一道题</p>
+<pre><code class="language-js">setTimeout(function(){
+    console.log('1')
+})
+
+new Promise(function(resolve){
+    console.log('2');
+    for(var i = 0; i &lt; 10000; i++){
+        i == 99 &amp;&amp; resolve();
+    }
+}).then(function(){
+    console.log('3')
+})
+
+console.log('4')
+</code></pre>
+<p>可能刚开始写前端不久的同学会给出1234这样的答案，而写过一段时间或者刷过几道题的前端则会给出2413这样的正解，那么你真的懂为什么了嘛，我们来稍微改一下题目</p>
+<pre><code class="language-js">setTimeout(function(){
+    console.log('1')
+    new Promise(function(resolve) {
+        console.log('2');
+        resolve();
+    }).then(function() {
+        console.log('3')
+    })
+})
+
+new Promise(function(resolve){
+    console.log('4')
+    resolve()
+}).then(function(){
+    new Promise(function(resolve) {
+        console.log('5');
+        resolve();
+    }).then(function() {
+        setTimeout(function(){
+            console.log('6')
+        })
+        new Promise(function(resolve1) {
+            console.log('7');
+            resolve1();
+        }).then(function() {
+            console.log('8')
+        })
+        console.log('9')
+    })
+    console.log('10')
+})
+
+console.log('11')
+</code></pre>
+<p>正确的答案应该是4，11，5，10，7，9，8，1，2，3，6，如果你能快速的给出答案并且已经了解事件队列，宏任务，微任务这几个概念，那么本篇文章后续的部分就不必再看下去了，剩下的同学继续往后走呀</p>
+<h3 id="settimeout">setTimeout</h3>
+<p>写过前端的同学一定用过大名鼎鼎的setTimeout，其基本的用法我就不再展开，大概就是让里面的代码延迟执行</p>
+<p>回到js是单线程的概念，当单线程遇到等会儿再执行的代码会怎么做呢，当然是整个打包扔到一边啦</p>
+<h3 id="promise">Promise</h3>
+<p>关于Promise的基本概念这里也不再展开了，我们只需要知道Promise内部的代码会立刻执行，then的代码会异步，那么对于异步的代码怎么办呢，当然也是选择整体打包丢在一边啦</p>
+<h3 id="js的异步">js的异步</h3>
+<p>再次回到js是单线程的概念，当它遇见等会儿再执行的东西都会选择丢在一旁再执行，那丢出去的东西去哪里了呢，当然就是进我们的任务队列啦，任务队列会收集这些任务，并让他们排好队，当主流程的东西执行完成后再执行这些队列中的东西<br>
+<img src="https://dominicbao.github.io/post-images/1620406826700.png" alt="" loading="lazy"><br>
+看到这里很多小伙伴就有疑惑了，对于第一题，答案应该是2413才对呀，3为什么能插队到1前面呢，那么我们就来讲讲为什么3能插队到1前面</p>
+<h3 id="宏任务和微任务">宏任务和微任务</h3>
+<p>我们先来讲讲定义吧<br>
+宏任务：</p>
+<ul>
+<li>setTimeout</li>
+<li>setInterval</li>
+<li>setImmediate</li>
+<li>requestAnimationFrame</li>
+<li>I/O</li>
+<li>UI渲染</li>
+</ul>
+<p>微任务</p>
+<ul>
+<li>Promise</li>
+<li>MutationObserver</li>
+<li>process.nextTick</li>
+<li>queueMicrotask</li>
+</ul>
+<p>从上面的描述可以看出不管是题目1还是题目2都是一个大的宏任务，宏任务里面又包括这宏任务和微任务，面对不同的任务当然要区别对待，当遇见宏任务的时候会将其整个打包丢进任务队列，排在当前宏任务的后面，那如果又碰到宏任务了，就排在上面的宏任务的后面，那如果碰到微任务了，就将其放到微任务队列，每一个宏任务执行完成后，会先去执行完所有的微任务，再开始下一个宏任务<br>
+<img src="https://dominicbao.github.io/post-images/1620407247087.png" alt="" loading="lazy"><br>
+看到这里大概就明白为什么第一题是2431了，3被放到了第一个宏任务的微任务队列，成功插队1</p>
+<p>那按照这个思路，第二题就变得很简单</p>
+<ol>
+<li>首先将整个第二题当作第一个宏任务丢进队列，碰到了1，2，3为代表的第一个宏任务，整个丢进任务队列排到当前任务后面，然后碰到了立刻执行的4和以5，6，7，8，9，10为代表的微任务，最后立刻执行11，至此4，11顺序已经出来了</li>
+<li>执行5，6，7，8，9，10为代表的微任务，立刻执行5， 碰到了以6，7，8，9为代表的微任务，立刻执行10，至此4，11，5，10顺序出来了</li>
+<li>执行6，7，8，9为代表的微任务，碰到了6为代表的宏任务，丢到1，2，3为代表的宏任务后面，立刻执行7，碰到了以8为代表的微任务，立刻执行9，至此4，11，5，10，7，9顺序出来了</li>
+<li>执行以8为代表的微任务，第一个宏任务结束，至此4，11，5，10，7，9，8顺序出来了</li>
+<li>执行1，2，3为代表的宏任务，立刻执行1，2将3放入微任务，至此4，11，5，10，7，9，8，1，2顺序出来了</li>
+<li>执行以3为代表的微任务，第一个宏任务结束，至此4，11，5，10，7，9，8，1，2，3顺序出来了</li>
+<li>执行以6为代表的宏任务，至此4，11，5，10，7，9，8，1，2，3，6的顺序全部完成</li>
+</ol>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Store.js的使用——本地存储localStorage的封装插件]]></title>
         <id>https://dominicbao.github.io/post/20191126-01/</id>
