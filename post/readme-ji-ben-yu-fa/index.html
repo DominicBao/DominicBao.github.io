@@ -2,23 +2,41 @@
   <head>
     <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Store.js的使用——本地存储localStorage的封装插件 | 阿方的博客</title>
+<title>README基本语法 | 阿方的博客</title>
 <link rel="shortcut icon" href="https://dominicbao.github.io/favicon.ico?v=1629644975508">
 <link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
 <link rel="stylesheet" href="https://dominicbao.github.io/styles/main.css">
-<link rel="alternate" type="application/atom+xml" title="Store.js的使用——本地存储localStorage的封装插件 | 阿方的博客 - Atom Feed" href="https://dominicbao.github.io/atom.xml">
+<link rel="alternate" type="application/atom+xml" title="README基本语法 | 阿方的博客 - Atom Feed" href="https://dominicbao.github.io/atom.xml">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
 
 
 
     <meta name="description" content="
-2019-11-26 @阿方
-在说Store.js之前，我们先来明确几个基本的概念，Cookie，localStorage，sessionStorage
+此文章仅给博客编写者使用
 
+标题
+标题1
+标题2
+标题3
+标题4
+标题5
+样式文本
+这是粗体文本
+这是斜体文本
+删除线
+全部粗体和斜体
+引用文本
 
-Cookie
-Cookie 是小甜饼的意思。顾名思义，cookie 确实非常小，..." />
-    <meta name="keywords" content="js,教程" />
+引用文本
+
+引用代码
+git status
+git add
+git commit
+
+链接
+..." />
+    <meta name="keywords" content="js" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
     <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
   </head>
@@ -84,22 +102,18 @@ Cookie 是小甜饼的意思。顾名思义，cookie 确实非常小，..." />
         <div class="post-detail">
           <article class="post">
             <h2 class="post-title">
-              Store.js的使用——本地存储localStorage的封装插件
+              README基本语法
             </h2>
             <div class="post-info">
               <span>
-                2021-04-27
+                2021-08-22
               </span>
               <span>
-                3 min read
+                1 min read
               </span>
               
                 <a href="https://dominicbao.github.io/tag/PpP9u4I0g/" class="post-tag">
                   # js
-                </a>
-              
-                <a href="https://dominicbao.github.io/tag/aQaAeaeCj/" class="post-tag">
-                  # 教程
                 </a>
               
             </div>
@@ -107,32 +121,101 @@ Cookie 是小甜饼的意思。顾名思义，cookie 确实非常小，..." />
             <div class="post-content-wrapper">
               <div class="post-content">
                 <blockquote>
-<p>2019-11-26 @阿方<br>
-在说Store.js之前，我们先来明确几个基本的概念，Cookie，localStorage，sessionStorage</p>
+<p>此文章仅给博客编写者使用</p>
 </blockquote>
+<h3 id="标题">标题</h3>
+<h1 id="标题1">标题1</h1>
+<h2 id="标题2">标题2</h2>
+<h3 id="标题3">标题3</h3>
+<h4 id="标题4">标题4</h4>
+<h5 id="标题5">标题5</h5>
+<h3 id="样式文本">样式文本</h3>
+<p><strong>这是粗体文本</strong><br>
+<em>这是斜体文本</em><br>
+<s>删除线</s><br>
+<em><strong>全部粗体和斜体</strong></em></p>
+<h3 id="引用文本">引用文本</h3>
+<blockquote>
+<p>引用文本</p>
+</blockquote>
+<h3 id="引用代码">引用代码</h3>
+<pre><code>git status
+git add
+git commit
+</code></pre>
+<h3 id="链接">链接</h3>
+<p><a href="https://pages.github.com/">github链接</a></p>
+<h3 id="列表">列表</h3>
 <ul>
-<li>Cookie<br>
-Cookie 是小甜饼的意思。顾名思义，cookie 确实非常小，它的大小限制为4KB左右，是网景公司的前雇员 Lou Montulli 在1993年3月的发明。它的主要用途有保存登录信息，比如你登录某个网站市场可以看到“记住密码”，这通常就是通过在 Cookie 中存入一段辨别用户身份的数据来实现的</li>
-<li>localStorage<br>
-localStorage 是 HTML5 标准中新加入的技术，它并不是什么划时代的新东西。早在 IE 6 时代，就有一个叫 userData 的东西用于本地存储，而当时考虑到浏览器兼容性，更通用的方案是使用 Flash。而如今，localStorage 被大多数浏览器所支持，如果你的网站需要支持 IE6+，那以 userData 作为你的 polyfill 的方案是种不错的选择</li>
-<li>sessionStorage<br>
-sessionStorage 与 localStorage 的接口类似，但保存数据的生命周期与 localStorage 不同。做过后端开发的同学应该知道 Session 这个词的意思，直译过来是“会话”。而 sessionStorage 是一个前端的概念，它只是可以将一部分数据在当前会话中保存下来，刷新页面数据依旧存在。但当页面关闭后，sessionStorage 中的数据就会被清空<br>
-<img src="https://dominicbao.github.io/post-images/1619538848881.png" alt="" loading="lazy"><br>
-有了以上的的基础概念，我们就可以来理解store.js到底是个什么东西了，随着浏览器的快速发展，很多需要用到本地存储的应用场景诞生了，于是需求推动了技术，什么globalStorage啊都来了。store.js可以理解成一个大礼包，他封装了大多数人对localStorage的使用，他不涉及cookie，在ie6之下时会自动使用userData，我们不必再去管什么场景下用什么本地浏览器存储会不会影响到cookies，影响到浏览器的传输速率，这就是它最大的用处<br>
-以下是它的基本语法<br>
-<img src="https://dominicbao.github.io/post-images/1619538912743.png" alt="" loading="lazy"><br>
-判断它在当前浏览器是否可用<br>
-<img src="https://dominicbao.github.io/post-images/1619538929903.png" alt="" loading="lazy"><br>
-好了简单的分享一下<br>
-Github地址：<br>
-https://github.com/marcuswestin/store.js/tree/master/dist<br>
-简要的文档github地址：<br>
-https://github.com/DominicBao/echarts-guanxi/branches</li>
+<li>George Washington</li>
+<li>John Adams</li>
+<li>Thomas Jefferson</li>
 </ul>
+<ol>
+<li>James Madison</li>
+<li>James Monroe</li>
+<li>John Quincy Adams</li>
+</ol>
+<h3 id="嵌套列表">嵌套列表</h3>
+<ol>
+<li>第一个列表项
+<ul>
+<li>第一个嵌套列表项
+<ul>
+<li>第二个嵌套列表项</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<h3 id="任务列表">任务列表</h3>
+<ul class="contains-task-list">
+<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-7110399"><label class="task-list-item-label" for="task-item-7110399"> 完成更改</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-3995537"><label class="task-list-item-label" for="task-item-3995537"> 推送提交到 GitHub</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-8333864"><label class="task-list-item-label" for="task-item-8333864"> 打开拉取请求</label></li>
+</ul>
+<h3 id="忽略-markdown-格式">忽略 Markdown 格式</h3>
+<p>让我们将 *our-new-project* 重命名为 *our-old-project*。</p>
 
               </div>
               <div class="toc-container">
-                
+                <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#%E6%A0%87%E9%A2%98">标题</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#%E6%A0%87%E9%A2%981">标题1</a>
+<ul>
+<li><a href="#%E6%A0%87%E9%A2%982">标题2</a>
+<ul>
+<li><a href="#%E6%A0%87%E9%A2%983">标题3</a>
+<ul>
+<li><a href="#%E6%A0%87%E9%A2%984">标题4</a>
+<ul>
+<li><a href="#%E6%A0%87%E9%A2%985">标题5</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#%E6%A0%B7%E5%BC%8F%E6%96%87%E6%9C%AC">样式文本</a></li>
+<li><a href="#%E5%BC%95%E7%94%A8%E6%96%87%E6%9C%AC">引用文本</a></li>
+<li><a href="#%E5%BC%95%E7%94%A8%E4%BB%A3%E7%A0%81">引用代码</a></li>
+<li><a href="#%E9%93%BE%E6%8E%A5">链接</a></li>
+<li><a href="#%E5%88%97%E8%A1%A8">列表</a></li>
+<li><a href="#%E5%B5%8C%E5%A5%97%E5%88%97%E8%A1%A8">嵌套列表</a></li>
+<li><a href="#%E4%BB%BB%E5%8A%A1%E5%88%97%E8%A1%A8">任务列表</a></li>
+<li><a href="#%E5%BF%BD%E7%95%A5-markdown-%E6%A0%BC%E5%BC%8F">忽略 Markdown 格式</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
               </div>
             </div>
           </article>
@@ -141,9 +224,9 @@ https://github.com/DominicBao/echarts-guanxi/branches</li>
         
           <div class="next-post">
             <div class="next">下一篇</div>
-            <a href="https://dominicbao.github.io/post/20191111-01/">
+            <a href="https://dominicbao.github.io/post/chang-jian-liu-lan-qi-nei-he/">
               <h3 class="post-title">
-                spark的学习笔记（1）
+                常见浏览器内核
               </h3>
             </a>
           </div>

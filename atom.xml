@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://dominicbao.github.io</id>
     <title>阿方的博客</title>
-    <updated>2021-05-07T17:20:39.307Z</updated>
+    <updated>2021-08-22T15:09:46.294Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://dominicbao.github.io"/>
     <link rel="self" href="https://dominicbao.github.io/atom.xml"/>
@@ -10,6 +10,95 @@
     <logo>https://dominicbao.github.io/images/avatar.png</logo>
     <icon>https://dominicbao.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, 阿方的博客</rights>
+    <entry>
+        <title type="html"><![CDATA[README基本语法]]></title>
+        <id>https://dominicbao.github.io/post/readme-ji-ben-yu-fa/</id>
+        <link href="https://dominicbao.github.io/post/readme-ji-ben-yu-fa/">
+        </link>
+        <updated>2021-08-22T14:49:49.000Z</updated>
+        <content type="html"><![CDATA[<blockquote>
+<p>此文章仅给博客编写者使用</p>
+</blockquote>
+<h3 id="标题">标题</h3>
+<h1 id="标题1">标题1</h1>
+<h2 id="标题2">标题2</h2>
+<h3 id="标题3">标题3</h3>
+<h4 id="标题4">标题4</h4>
+<h5 id="标题5">标题5</h5>
+<h3 id="样式文本">样式文本</h3>
+<p><strong>这是粗体文本</strong><br>
+<em>这是斜体文本</em><br>
+<s>删除线</s><br>
+<em><strong>全部粗体和斜体</strong></em></p>
+<h3 id="引用文本">引用文本</h3>
+<blockquote>
+<p>引用文本</p>
+</blockquote>
+<h3 id="引用代码">引用代码</h3>
+<pre><code>git status
+git add
+git commit
+</code></pre>
+<h3 id="链接">链接</h3>
+<p><a href="https://pages.github.com/">github链接</a></p>
+<h3 id="列表">列表</h3>
+<ul>
+<li>George Washington</li>
+<li>John Adams</li>
+<li>Thomas Jefferson</li>
+</ul>
+<ol>
+<li>James Madison</li>
+<li>James Monroe</li>
+<li>John Quincy Adams</li>
+</ol>
+<h3 id="嵌套列表">嵌套列表</h3>
+<ol>
+<li>第一个列表项
+<ul>
+<li>第一个嵌套列表项
+<ul>
+<li>第二个嵌套列表项</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<h3 id="任务列表">任务列表</h3>
+<ul class="contains-task-list">
+<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-7110399"><label class="task-list-item-label" for="task-item-7110399"> 完成更改</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-3995537"><label class="task-list-item-label" for="task-item-3995537"> 推送提交到 GitHub</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-8333864"><label class="task-list-item-label" for="task-item-8333864"> 打开拉取请求</label></li>
+</ul>
+<h3 id="忽略-markdown-格式">忽略 Markdown 格式</h3>
+<p>让我们将 *our-new-project* 重命名为 *our-old-project*。</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[常见浏览器内核]]></title>
+        <id>https://dominicbao.github.io/post/chang-jian-liu-lan-qi-nei-he/</id>
+        <link href="https://dominicbao.github.io/post/chang-jian-liu-lan-qi-nei-he/">
+        </link>
+        <updated>2021-08-22T14:44:20.000Z</updated>
+        <content type="html"><![CDATA[<h1 id="内核">内核</h1>
+<p>Trident：IE 浏览器内核；<br>
+Gecko：Firefox 浏览器内核；<br>
+Presto：Opera 浏览器内核；<br>
+Webkit：Safari 浏览器内核；<br>
+Blink：谷歌浏览器内核，属于 Webkit 的一个分支，与 Opera 一起在研发；</p>
+<h1 id="浏览器">浏览器</h1>
+<p>IE：Trident，IE 内核；<br>
+Chrome：以前是 Webkit，现在是 Blink 内核；<br>
+Firefox：Gecko 内核；<br>
+Safari：Webkit 内核；<br>
+Opera：一起是 Presto，现在是 Blink 内核；<br>
+360、猎豹浏览器内核：IE + Blink 双内核；<br>
+搜狗、遨游、QQ 浏览器内核：Trident（兼容模式）+ Webkit（高速模式）；<br>
+百度浏览器、世界之窗内核：IE 内核；<br>
+2345 浏览器：以前是 IE 内核，现在是 IE + Blink 双内核；<br>
+UC 浏览器内核：Webkit + Trident；</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[浅谈JavaScript执行机制]]></title>
         <id>https://dominicbao.github.io/post/20210505-01/</id>
