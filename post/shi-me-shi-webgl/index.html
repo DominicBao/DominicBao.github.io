@@ -2,29 +2,23 @@
   <head>
     <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>关于 | 阿方的博客</title>
+<title>什么是webgl | 阿方的博客</title>
 <link rel="shortcut icon" href="https://dominicbao.github.io/favicon.ico?v=1633166320915">
 <link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
 <link rel="stylesheet" href="https://dominicbao.github.io/styles/main.css">
-<link rel="alternate" type="application/atom+xml" title="关于 | 阿方的博客 - Atom Feed" href="https://dominicbao.github.io/atom.xml">
+<link rel="alternate" type="application/atom+xml" title="什么是webgl | 阿方的博客 - Atom Feed" href="https://dominicbao.github.io/atom.xml">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
 
 
 
-    <meta name="description" content="
-随遇而安，莫怀己兮🤠
-
-🏠 关于本站
-记录一点成长历程
-👨‍💻 博主是谁
-前端可视化方向小白一枚
-⛹ 兴趣爱好
-撸猫撸狗
-肥宅一枚
-📬 联系我呀
-bzfdominic@hdu.edu.cn
-..." />
-    <meta name="keywords" content="" />
+    <meta name="description" content="###js的api
+###以惊人的速度渲染三角形
+###结果可以被画在canvas上
+###与大多数现代浏览器兼容
+###使用图形处理单元（GPU）
+###可在2D的世界中将3D的东西表现出来
+众所周知，cpu的执行速度非常的快，但是cpu..." />
+    <meta name="keywords" content="three.js" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
     <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
   </head>
@@ -90,51 +84,53 @@ bzfdominic@hdu.edu.cn
         <div class="post-detail">
           <article class="post">
             <h2 class="post-title">
-              关于
+              什么是webgl
             </h2>
             <div class="post-info">
               <span>
-                2019-01-25
+                2021-09-26
               </span>
               <span>
-                1 min read
+                2 min read
               </span>
+              
+                <a href="https://dominicbao.github.io/tag/9NxYTmWqN/" class="post-tag">
+                  # three.js
+                </a>
               
             </div>
             
             <div class="post-content-wrapper">
               <div class="post-content">
-                <blockquote>
-<p>随遇而安，莫怀己兮🤠</p>
-</blockquote>
-<h2 id="关于本站">🏠 关于本站</h2>
-<p>记录一点成长历程</p>
-<h2 id="博主是谁">👨‍💻 博主是谁</h2>
-<p>前端可视化方向小白一枚</p>
-<h2 id="兴趣爱好">⛹ 兴趣爱好</h2>
-<p>撸猫撸狗<br>
-肥宅一枚</p>
-<h2 id="联系我呀">📬 联系我呀</h2>
-<p>bzfdominic@hdu.edu.cn</p>
+                <p>###js的api<br>
+###以惊人的速度渲染三角形<br>
+###结果可以被画在canvas上<br>
+###与大多数现代浏览器兼容<br>
+###使用图形处理单元（GPU）<br>
+###可在2D的世界中将3D的东西表现出来<br>
+众所周知，cpu的执行速度非常的快，但是cpu只能一个一个的执行，相对于cpu来讲，gpu的执行速度比较慢，但是gpu可以同时做成千上万的计算。以此为理论依据，要绘制3D模型，是不是可以在正确的位置绘制很多的三角形并为它们着色。<br>
+gpu在绘制3D图形的时候将根据许多因素一次定位所有这些点，其中一个因素就是位置，gpu将绘制构成3D图形的每一个三角形的每个可见像素，这数千个像素将被非常快速地并行计算和绘制。<br>
+放置点和绘制像素的指令写在着色器（shaders）中，我们为这些着色器提供了一堆信息，比如点的位置，模型转换，相机位置和东西的位置以及我们想画的颜色。这就是为什么原生的webgl这么难的原因，在画布世界上画一个三角形至少需要100行代码。<br>
+原生webgl受益于它在代码的底层，这使得优化和更多的控制成为可能<br>
+three.js 由此而生</p>
 
               </div>
               <div class="toc-container">
-                <ul class="markdownIt-TOC">
-<li>
-<ul>
-<li><a href="#%E5%85%B3%E4%BA%8E%E6%9C%AC%E7%AB%99">🏠 关于本站</a></li>
-<li><a href="#%E5%8D%9A%E4%B8%BB%E6%98%AF%E8%B0%81">👨‍💻 博主是谁</a></li>
-<li><a href="#%E5%85%B4%E8%B6%A3%E7%88%B1%E5%A5%BD">⛹ 兴趣爱好</a></li>
-<li><a href="#%E8%81%94%E7%B3%BB%E6%88%91%E5%91%80">📬 联系我呀</a></li>
-</ul>
-</li>
-</ul>
-
+                
               </div>
             </div>
           </article>
         </div>
 
+        
+          <div class="next-post">
+            <div class="next">下一篇</div>
+            <a href="https://dominicbao.github.io/post/readme-ji-ben-yu-fa/">
+              <h3 class="post-title">
+                README基本语法
+              </h3>
+            </a>
+          </div>
         
 
         

@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://dominicbao.github.io</id>
     <title>阿方的博客</title>
-    <updated>2021-09-12T13:03:27.444Z</updated>
+    <updated>2021-10-02T09:19:51.163Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://dominicbao.github.io"/>
     <link rel="self" href="https://dominicbao.github.io/atom.xml"/>
@@ -10,6 +10,25 @@
     <logo>https://dominicbao.github.io/images/avatar.png</logo>
     <icon>https://dominicbao.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, 阿方的博客</rights>
+    <entry>
+        <title type="html"><![CDATA[什么是webgl]]></title>
+        <id>https://dominicbao.github.io/post/shi-me-shi-webgl/</id>
+        <link href="https://dominicbao.github.io/post/shi-me-shi-webgl/">
+        </link>
+        <updated>2021-09-25T16:15:23.000Z</updated>
+        <content type="html"><![CDATA[<p>###js的api<br>
+###以惊人的速度渲染三角形<br>
+###结果可以被画在canvas上<br>
+###与大多数现代浏览器兼容<br>
+###使用图形处理单元（GPU）<br>
+###可在2D的世界中将3D的东西表现出来<br>
+众所周知，cpu的执行速度非常的快，但是cpu只能一个一个的执行，相对于cpu来讲，gpu的执行速度比较慢，但是gpu可以同时做成千上万的计算。以此为理论依据，要绘制3D模型，是不是可以在正确的位置绘制很多的三角形并为它们着色。<br>
+gpu在绘制3D图形的时候将根据许多因素一次定位所有这些点，其中一个因素就是位置，gpu将绘制构成3D图形的每一个三角形的每个可见像素，这数千个像素将被非常快速地并行计算和绘制。<br>
+放置点和绘制像素的指令写在着色器（shaders）中，我们为这些着色器提供了一堆信息，比如点的位置，模型转换，相机位置和东西的位置以及我们想画的颜色。这就是为什么原生的webgl这么难的原因，在画布世界上画一个三角形至少需要100行代码。<br>
+原生webgl受益于它在代码的底层，这使得优化和更多的控制成为可能<br>
+three.js 由此而生</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[README基本语法]]></title>
         <id>https://dominicbao.github.io/post/readme-ji-ben-yu-fa/</id>
@@ -66,9 +85,9 @@ git commit
 </ol>
 <h3 id="任务列表">任务列表</h3>
 <ul class="contains-task-list">
-<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-2108683"><label class="task-list-item-label" for="task-item-2108683"> 完成更改</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-6871633"><label class="task-list-item-label" for="task-item-6871633"> 推送提交到 GitHub</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-2301327"><label class="task-list-item-label" for="task-item-2301327"> 打开拉取请求</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-264460"><label class="task-list-item-label" for="task-item-264460"> 完成更改</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-7190003"><label class="task-list-item-label" for="task-item-7190003"> 推送提交到 GitHub</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-8000940"><label class="task-list-item-label" for="task-item-8000940"> 打开拉取请求</label></li>
 </ul>
 <h3 id="忽略-markdown-格式">忽略 Markdown 格式</h3>
 <p>让我们将 *our-new-project* 重命名为 *our-old-project*。</p>
