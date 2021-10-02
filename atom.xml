@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://dominicbao.github.io</id>
     <title>阿方的博客</title>
-    <updated>2021-10-02T09:19:51.163Z</updated>
+    <updated>2021-10-02T09:54:55.498Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://dominicbao.github.io"/>
     <link rel="self" href="https://dominicbao.github.io/atom.xml"/>
@@ -11,7 +11,7 @@
     <icon>https://dominicbao.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, 阿方的博客</rights>
     <entry>
-        <title type="html"><![CDATA[什么是webgl]]></title>
+        <title type="html"><![CDATA[什么是webgl为什么使用threejs]]></title>
         <id>https://dominicbao.github.io/post/shi-me-shi-webgl/</id>
         <link href="https://dominicbao.github.io/post/shi-me-shi-webgl/">
         </link>
@@ -27,6 +27,22 @@ gpu在绘制3D图形的时候将根据许多因素一次定位所有这些点，
 放置点和绘制像素的指令写在着色器（shaders）中，我们为这些着色器提供了一堆信息，比如点的位置，模型转换，相机位置和东西的位置以及我们想画的颜色。这就是为什么原生的webgl这么难的原因，在画布世界上画一个三角形至少需要100行代码。<br>
 原生webgl受益于它在代码的底层，这使得优化和更多的控制成为可能<br>
 three.js 由此而生</p>
+<p>##什么是three.js<br>
+###js 库<br>
+###MIT 许可证<br>
+###在webgl上的封装<br>
+###Ricardo Cabello (Mr.doob)编写<br>
+three.js大大简化了所有这一切的流程，并且，我们仍然可以与 webgl 交互，我们可以创建我们自己的着色器并提供我们自己的信息，现在有很大的社区去帮助我们学习threejs<br>
+https://github.com/mrdoob/three.js/graphs/contributors</p>
+<p>每个月图书馆都在更新<br>
+https://github.com/mrdoob/three.js/releases</p>
+<p>也可以在主页上找到很多优秀的案例<br>
+https://threejs.org</p>
+<p>还有一个维护良好的文档<br>
+https://threejs.org/docs/index.html#manual/en/introduction/Creating-a-scene</p>
+<p>可以找到成千上万开源代码的例子<br>
+https://threejs.org/examples/#webgl_tonemapping</p>
+<p>thress.js是最流行的webgl库，非常稳定，提供很多功能，文档丰富，社区正在努力更新，仍然足够接近原生webgl</p>
 ]]></content>
     </entry>
     <entry>
@@ -85,9 +101,9 @@ git commit
 </ol>
 <h3 id="任务列表">任务列表</h3>
 <ul class="contains-task-list">
-<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-264460"><label class="task-list-item-label" for="task-item-264460"> 完成更改</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-7190003"><label class="task-list-item-label" for="task-item-7190003"> 推送提交到 GitHub</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-8000940"><label class="task-list-item-label" for="task-item-8000940"> 打开拉取请求</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-8826071"><label class="task-list-item-label" for="task-item-8826071"> 完成更改</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-6681814"><label class="task-list-item-label" for="task-item-6681814"> 推送提交到 GitHub</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-923680"><label class="task-list-item-label" for="task-item-923680"> 打开拉取请求</label></li>
 </ul>
 <h3 id="忽略-markdown-格式">忽略 Markdown 格式</h3>
 <p>让我们将 *our-new-project* 重命名为 *our-old-project*。</p>
