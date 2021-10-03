@@ -3,7 +3,7 @@
     <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>基本的场景SCENE | 阿方的博客</title>
-<link rel="shortcut icon" href="https://dominicbao.github.io/favicon.ico?v=1633275398441">
+<link rel="shortcut icon" href="https://dominicbao.github.io/favicon.ico?v=1633277549162">
 <link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
 <link rel="stylesheet" href="https://dominicbao.github.io/styles/main.css">
 <link rel="alternate" type="application/atom+xml" title="基本的场景SCENE | 阿方的博客 - Atom Feed" href="https://dominicbao.github.io/atom.xml">
@@ -12,7 +12,14 @@
 
 
     <meta name="description" content="让three.js以最简单的方式工作
-" />
+没有打包（bundler），没有依赖，没有模块
+一个js和一个html文件
+4个元素开始three.js
+scene（场景）
+一些对象
+camera（相机）
+renderer(渲染器)
+..." />
     <meta name="keywords" content="" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
     <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
@@ -22,7 +29,7 @@
       <div class="main-content">
         <div class="site-header">
   <a href="https://dominicbao.github.io">
-  <img class="avatar" src="https://dominicbao.github.io/images/avatar.png?v=1633275398441" alt="">
+  <img class="avatar" src="https://dominicbao.github.io/images/avatar.png?v=1633277549162" alt="">
   </a>
   <h1 class="site-title">
     阿方的博客
@@ -94,6 +101,13 @@
             <div class="post-content-wrapper">
               <div class="post-content">
                 <h3 id="让threejs以最简单的方式工作">让three.js以最简单的方式工作</h3>
+<h3 id="没有打包bundler没有依赖没有模块">没有打包（bundler），没有依赖，没有模块</h3>
+<h3 id="一个js和一个html文件">一个js和一个html文件</h3>
+<h2 id="4个元素开始threejs">4个元素开始three.js</h2>
+<h3 id="scene场景">scene（场景）</h3>
+<h3 id="一些对象">一些对象</h3>
+<h3 id="camera相机">camera（相机）</h3>
+<h3 id="renderer渲染器">renderer(渲染器)</h3>
 
               </div>
               <div class="toc-container">
@@ -103,6 +117,16 @@
 <li>
 <ul>
 <li><a href="#%E8%AE%A9threejs%E4%BB%A5%E6%9C%80%E7%AE%80%E5%8D%95%E7%9A%84%E6%96%B9%E5%BC%8F%E5%B7%A5%E4%BD%9C">让three.js以最简单的方式工作</a></li>
+<li><a href="#%E6%B2%A1%E6%9C%89%E6%89%93%E5%8C%85bundler%E6%B2%A1%E6%9C%89%E4%BE%9D%E8%B5%96%E6%B2%A1%E6%9C%89%E6%A8%A1%E5%9D%97">没有打包（bundler），没有依赖，没有模块</a></li>
+<li><a href="#%E4%B8%80%E4%B8%AAjs%E5%92%8C%E4%B8%80%E4%B8%AAhtml%E6%96%87%E4%BB%B6">一个js和一个html文件</a></li>
+</ul>
+</li>
+<li><a href="#4%E4%B8%AA%E5%85%83%E7%B4%A0%E5%BC%80%E5%A7%8Bthreejs">4个元素开始three.js</a>
+<ul>
+<li><a href="#scene%E5%9C%BA%E6%99%AF">scene（场景）</a></li>
+<li><a href="#%E4%B8%80%E4%BA%9B%E5%AF%B9%E8%B1%A1">一些对象</a></li>
+<li><a href="#camera%E7%9B%B8%E6%9C%BA">camera（相机）</a></li>
+<li><a href="#renderer%E6%B8%B2%E6%9F%93%E5%99%A8">renderer(渲染器)</a></li>
 </ul>
 </li>
 </ul>
