@@ -3,7 +3,7 @@
     <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>什么是webgl为什么使用threejs | 阿方的博客</title>
-<link rel="shortcut icon" href="https://dominicbao.github.io/favicon.ico?v=1633168492300">
+<link rel="shortcut icon" href="https://dominicbao.github.io/favicon.ico?v=1633274955697">
 <link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
 <link rel="stylesheet" href="https://dominicbao.github.io/styles/main.css">
 <link rel="alternate" type="application/atom+xml" title="什么是webgl为什么使用threejs | 阿方的博客 - Atom Feed" href="https://dominicbao.github.io/atom.xml">
@@ -11,13 +11,13 @@
 
 
 
-    <meta name="description" content="###js的api
-###以惊人的速度渲染三角形
-###结果可以被画在canvas上
-###与大多数现代浏览器兼容
-###使用图形处理单元（GPU）
-###可在2D的世界中将3D的东西表现出来
-众所周知，cpu的执行速度非常的快，但是cpu..." />
+    <meta name="description" content="js的api
+以惊人的速度渲染三角形
+结果可以被画在canvas上
+与大多数现代浏览器兼容
+使用图形处理单元（GPU）
+可在2D的世界中将3D的东西表现出来
+众所周知，cpu的执行速度非常的快，但是cpu只能一个一个的执行，相对于cpu来讲..." />
     <meta name="keywords" content="three.js" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
     <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
@@ -27,7 +27,7 @@
       <div class="main-content">
         <div class="site-header">
   <a href="https://dominicbao.github.io">
-  <img class="avatar" src="https://dominicbao.github.io/images/avatar.png?v=1633168492300" alt="">
+  <img class="avatar" src="https://dominicbao.github.io/images/avatar.png?v=1633274955697" alt="">
   </a>
   <h1 class="site-title">
     阿方的博客
@@ -102,23 +102,23 @@
             
             <div class="post-content-wrapper">
               <div class="post-content">
-                <p>###js的api<br>
-###以惊人的速度渲染三角形<br>
-###结果可以被画在canvas上<br>
-###与大多数现代浏览器兼容<br>
-###使用图形处理单元（GPU）<br>
-###可在2D的世界中将3D的东西表现出来<br>
-众所周知，cpu的执行速度非常的快，但是cpu只能一个一个的执行，相对于cpu来讲，gpu的执行速度比较慢，但是gpu可以同时做成千上万的计算。以此为理论依据，要绘制3D模型，是不是可以在正确的位置绘制很多的三角形并为它们着色。<br>
+                <h3 id="js的api">js的api</h3>
+<h3 id="以惊人的速度渲染三角形">以惊人的速度渲染三角形</h3>
+<h3 id="结果可以被画在canvas上">结果可以被画在canvas上</h3>
+<h3 id="与大多数现代浏览器兼容">与大多数现代浏览器兼容</h3>
+<h3 id="使用图形处理单元gpu">使用图形处理单元（GPU）</h3>
+<h3 id="可在2d的世界中将3d的东西表现出来">可在2D的世界中将3D的东西表现出来</h3>
+<p>众所周知，cpu的执行速度非常的快，但是cpu只能一个一个的执行，相对于cpu来讲，gpu的执行速度比较慢，但是gpu可以同时做成千上万的计算。以此为理论依据，要绘制3D模型，是不是可以在正确的位置绘制很多的三角形并为它们着色。<br>
 gpu在绘制3D图形的时候将根据许多因素一次定位所有这些点，其中一个因素就是位置，gpu将绘制构成3D图形的每一个三角形的每个可见像素，这数千个像素将被非常快速地并行计算和绘制。<br>
 放置点和绘制像素的指令写在着色器（shaders）中，我们为这些着色器提供了一堆信息，比如点的位置，模型转换，相机位置和东西的位置以及我们想画的颜色。这就是为什么原生的webgl这么难的原因，在画布世界上画一个三角形至少需要100行代码。<br>
 原生webgl受益于它在代码的底层，这使得优化和更多的控制成为可能<br>
 three.js 由此而生</p>
-<p>##什么是three.js<br>
-###js 库<br>
-###MIT 许可证<br>
-###在webgl上的封装<br>
-###Ricardo Cabello (Mr.doob)编写<br>
-three.js大大简化了所有这一切的流程，并且，我们仍然可以与 webgl 交互，我们可以创建我们自己的着色器并提供我们自己的信息，现在有很大的社区去帮助我们学习threejs<br>
+<h2 id="什么是threejs">什么是three.js</h2>
+<h3 id="js-库">js 库</h3>
+<h3 id="mit-许可证">MIT 许可证</h3>
+<h3 id="在webgl上的封装">在webgl上的封装</h3>
+<h3 id="ricardo-cabello-mrdoob编写">Ricardo Cabello (Mr.doob)编写</h3>
+<p>three.js大大简化了所有这一切的流程，并且，我们仍然可以与 webgl 交互，我们可以创建我们自己的着色器并提供我们自己的信息，现在有很大的社区去帮助我们学习threejs<br>
 https://github.com/mrdoob/three.js/graphs/contributors</p>
 <p>每个月图书馆都在更新<br>
 https://github.com/mrdoob/three.js/releases</p>
@@ -132,7 +132,31 @@ https://threejs.org/examples/#webgl_tonemapping</p>
 
               </div>
               <div class="toc-container">
-                
+                <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#js%E7%9A%84api">js的api</a></li>
+<li><a href="#%E4%BB%A5%E6%83%8A%E4%BA%BA%E7%9A%84%E9%80%9F%E5%BA%A6%E6%B8%B2%E6%9F%93%E4%B8%89%E8%A7%92%E5%BD%A2">以惊人的速度渲染三角形</a></li>
+<li><a href="#%E7%BB%93%E6%9E%9C%E5%8F%AF%E4%BB%A5%E8%A2%AB%E7%94%BB%E5%9C%A8canvas%E4%B8%8A">结果可以被画在canvas上</a></li>
+<li><a href="#%E4%B8%8E%E5%A4%A7%E5%A4%9A%E6%95%B0%E7%8E%B0%E4%BB%A3%E6%B5%8F%E8%A7%88%E5%99%A8%E5%85%BC%E5%AE%B9">与大多数现代浏览器兼容</a></li>
+<li><a href="#%E4%BD%BF%E7%94%A8%E5%9B%BE%E5%BD%A2%E5%A4%84%E7%90%86%E5%8D%95%E5%85%83gpu">使用图形处理单元（GPU）</a></li>
+<li><a href="#%E5%8F%AF%E5%9C%A82d%E7%9A%84%E4%B8%96%E7%95%8C%E4%B8%AD%E5%B0%863d%E7%9A%84%E4%B8%9C%E8%A5%BF%E8%A1%A8%E7%8E%B0%E5%87%BA%E6%9D%A5">可在2D的世界中将3D的东西表现出来</a></li>
+</ul>
+</li>
+<li><a href="#%E4%BB%80%E4%B9%88%E6%98%AFthreejs">什么是three.js</a>
+<ul>
+<li><a href="#js-%E5%BA%93">js 库</a></li>
+<li><a href="#mit-%E8%AE%B8%E5%8F%AF%E8%AF%81">MIT 许可证</a></li>
+<li><a href="#%E5%9C%A8webgl%E4%B8%8A%E7%9A%84%E5%B0%81%E8%A3%85">在webgl上的封装</a></li>
+<li><a href="#ricardo-cabello-mrdoob%E7%BC%96%E5%86%99">Ricardo Cabello (Mr.doob)编写</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
               </div>
             </div>
           </article>

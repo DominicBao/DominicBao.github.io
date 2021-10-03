@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://dominicbao.github.io</id>
     <title>阿方的博客</title>
-    <updated>2021-10-02T09:54:55.498Z</updated>
+    <updated>2021-10-03T15:29:18.059Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://dominicbao.github.io"/>
     <link rel="self" href="https://dominicbao.github.io/atom.xml"/>
@@ -16,23 +16,23 @@
         <link href="https://dominicbao.github.io/post/shi-me-shi-webgl/">
         </link>
         <updated>2021-09-25T16:15:23.000Z</updated>
-        <content type="html"><![CDATA[<p>###js的api<br>
-###以惊人的速度渲染三角形<br>
-###结果可以被画在canvas上<br>
-###与大多数现代浏览器兼容<br>
-###使用图形处理单元（GPU）<br>
-###可在2D的世界中将3D的东西表现出来<br>
-众所周知，cpu的执行速度非常的快，但是cpu只能一个一个的执行，相对于cpu来讲，gpu的执行速度比较慢，但是gpu可以同时做成千上万的计算。以此为理论依据，要绘制3D模型，是不是可以在正确的位置绘制很多的三角形并为它们着色。<br>
+        <content type="html"><![CDATA[<h3 id="js的api">js的api</h3>
+<h3 id="以惊人的速度渲染三角形">以惊人的速度渲染三角形</h3>
+<h3 id="结果可以被画在canvas上">结果可以被画在canvas上</h3>
+<h3 id="与大多数现代浏览器兼容">与大多数现代浏览器兼容</h3>
+<h3 id="使用图形处理单元gpu">使用图形处理单元（GPU）</h3>
+<h3 id="可在2d的世界中将3d的东西表现出来">可在2D的世界中将3D的东西表现出来</h3>
+<p>众所周知，cpu的执行速度非常的快，但是cpu只能一个一个的执行，相对于cpu来讲，gpu的执行速度比较慢，但是gpu可以同时做成千上万的计算。以此为理论依据，要绘制3D模型，是不是可以在正确的位置绘制很多的三角形并为它们着色。<br>
 gpu在绘制3D图形的时候将根据许多因素一次定位所有这些点，其中一个因素就是位置，gpu将绘制构成3D图形的每一个三角形的每个可见像素，这数千个像素将被非常快速地并行计算和绘制。<br>
 放置点和绘制像素的指令写在着色器（shaders）中，我们为这些着色器提供了一堆信息，比如点的位置，模型转换，相机位置和东西的位置以及我们想画的颜色。这就是为什么原生的webgl这么难的原因，在画布世界上画一个三角形至少需要100行代码。<br>
 原生webgl受益于它在代码的底层，这使得优化和更多的控制成为可能<br>
 three.js 由此而生</p>
-<p>##什么是three.js<br>
-###js 库<br>
-###MIT 许可证<br>
-###在webgl上的封装<br>
-###Ricardo Cabello (Mr.doob)编写<br>
-three.js大大简化了所有这一切的流程，并且，我们仍然可以与 webgl 交互，我们可以创建我们自己的着色器并提供我们自己的信息，现在有很大的社区去帮助我们学习threejs<br>
+<h2 id="什么是threejs">什么是three.js</h2>
+<h3 id="js-库">js 库</h3>
+<h3 id="mit-许可证">MIT 许可证</h3>
+<h3 id="在webgl上的封装">在webgl上的封装</h3>
+<h3 id="ricardo-cabello-mrdoob编写">Ricardo Cabello (Mr.doob)编写</h3>
+<p>three.js大大简化了所有这一切的流程，并且，我们仍然可以与 webgl 交互，我们可以创建我们自己的着色器并提供我们自己的信息，现在有很大的社区去帮助我们学习threejs<br>
 https://github.com/mrdoob/three.js/graphs/contributors</p>
 <p>每个月图书馆都在更新<br>
 https://github.com/mrdoob/three.js/releases</p>
@@ -101,9 +101,9 @@ git commit
 </ol>
 <h3 id="任务列表">任务列表</h3>
 <ul class="contains-task-list">
-<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-8826071"><label class="task-list-item-label" for="task-item-8826071"> 完成更改</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-6681814"><label class="task-list-item-label" for="task-item-6681814"> 推送提交到 GitHub</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-923680"><label class="task-list-item-label" for="task-item-923680"> 打开拉取请求</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-9387630"><label class="task-list-item-label" for="task-item-9387630"> 完成更改</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-8407104"><label class="task-list-item-label" for="task-item-8407104"> 推送提交到 GitHub</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-7384469"><label class="task-list-item-label" for="task-item-7384469"> 打开拉取请求</label></li>
 </ul>
 <h3 id="忽略-markdown-格式">忽略 Markdown 格式</h3>
 <p>让我们将 *our-new-project* 重命名为 *our-old-project*。</p>
