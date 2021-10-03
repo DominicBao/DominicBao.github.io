@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://dominicbao.github.io</id>
     <title>阿方的博客</title>
-    <updated>2021-10-03T15:33:32.551Z</updated>
+    <updated>2021-10-03T15:36:43.638Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://dominicbao.github.io"/>
     <link rel="self" href="https://dominicbao.github.io/atom.xml"/>
@@ -10,6 +10,15 @@
     <logo>https://dominicbao.github.io/images/avatar.png</logo>
     <icon>https://dominicbao.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, 阿方的博客</rights>
+    <entry>
+        <title type="html"><![CDATA[基本的场景SCENE]]></title>
+        <id>https://dominicbao.github.io/post/ji-ben-de-chang-jing-scene/</id>
+        <link href="https://dominicbao.github.io/post/ji-ben-de-chang-jing-scene/">
+        </link>
+        <updated>2021-10-03T15:34:17.000Z</updated>
+        <content type="html"><![CDATA[<h3 id="让threejs以最简单的方式工作">让three.js以最简单的方式工作</h3>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[什么是webgl为什么使用threejs]]></title>
         <id>https://dominicbao.github.io/post/shi-me-shi-webgl/</id>
@@ -101,9 +110,9 @@ git commit
 </ol>
 <h3 id="任务列表">任务列表</h3>
 <ul class="contains-task-list">
-<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-4827085"><label class="task-list-item-label" for="task-item-4827085"> 完成更改</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-2057036"><label class="task-list-item-label" for="task-item-2057036"> 推送提交到 GitHub</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-5796060"><label class="task-list-item-label" for="task-item-5796060"> 打开拉取请求</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-3107072"><label class="task-list-item-label" for="task-item-3107072"> 完成更改</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-7586256"><label class="task-list-item-label" for="task-item-7586256"> 推送提交到 GitHub</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-2842557"><label class="task-list-item-label" for="task-item-2842557"> 打开拉取请求</label></li>
 </ul>
 <h3 id="忽略-markdown-格式">忽略 Markdown 格式</h3>
 <p>让我们将 *our-new-project* 重命名为 *our-old-project*。</p>
